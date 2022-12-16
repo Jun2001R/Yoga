@@ -17,6 +17,7 @@ from current year. Details entered in registration form are sending to database 
 <collection>.save(document) method.
 
 ![dashboard](https://user-images.githubusercontent.com/68116883/208151409-8391d4ef-743d-4bf6-bd00-9159c897205b.png)
+  <hr>
   ![paymentunpaid](https://user-images.githubusercontent.com/68116883/208153832-2a56adc1-5462-4593-bb21-7b28c3bf0f28.png)
 Dashboard:
 After registration if anyone login with their valid credentials, then its entered information will go(by post method) for searching in database by <collection>.find({emailId:req.body.email})
