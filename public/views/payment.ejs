@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Pay Now</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            background-color: #0b5aa3;
+            color: white;
+            padding: 1rem;
+            margin: 0 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+        .yogalogo{
+    width:7%;
+margin: auto;
+}
+nav {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .container {
+            margin-top: 1rem;
+            padding: 2rem;
+            box-shadow: 3px 6px 8px 8px #bdbdbd;
+            margin-bottom: 2rem;
+        }
+        .container form {
+            padding: 0rem;
+        }
+        .submitbtn {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .registerheading {
+            margin: auto;
+            text-align: center;
+            color: #0b5aa3;
+        }
+        .data{
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<nav>
+    <img src="https://jun2001r.github.io/backup/yogalogo.jpg" alt="Yoga Logo" class="yogalogo">
+  </nav>
+<body>
+    <div class="container">
+        <h2 class="registerheading">Payment</h2>
+        <div class="box">
+            <p>Name: <span class="data"><%=name%></span></p>
+            <p>Email Id: <span class="identity data"><%=email%></span></p>
+            <p>Amount: <span class="data">Rs. 500</span></p>
+            <p class="payMonth"></p>
+            <form action="./success" method="post">
+                <div class="EmailId">
+                   
+                </div>
+                <div class="currentMonth">
+                  
+                </div>
+                <div class="currentYear">
+
+                </div>
+                <div class="col-12 my-1">
+                    <label for="batchSelected">Select Any Batch : </label>
+                    <select class="form-select" aria-label="Default select example" name="batchSelected" required>
+                        <option>Open this select menu</option>
+                        <option value="6-7AM">6-7AM</option>
+                        <option value="7-8AM">7-8AM</option>
+                        <option value="8-9AM">8-9AM</option>
+                        <option value="5-6PM">5-6PM</option>
+                    </select>
+                </div>
+                <div class="col-12 my-4">
+                    <label for="bank">Select Your Bank</label>
+                    <select name="bankname" class="form-control" required>
+                        <option selected="selected" value="0">--Select --</option>
+                        <option value="1">ALLAHABAD BANK </option>
+                        <option value="2">ANDHRA BANK</option>
+                        <option value="3">AXIS BANK</option>
+                        <option value="29">STATE BANK OF INDIA</option>
+                        <option value="4">BANK OF BARODA</option>
+                        <option value="29">UCO BANK</option>
+                        <option value="29">UNION BANK OF INDIA</option>
+                        <option value="5">BANK OF INDIA</option>
+                        <option value="20">BANDHAN BANK LIMITED</option>
+                        <option value="7">CANARA BANK</option>
+                        <option value="32">GRAMIN VIKASH BANK</option>
+                        <option value="8">CORPORATION BANK</option>
+                        <option value="9">INDIAN BANK</option>
+                        <option value="10">INDIAN OVERSEAS BANK</option>
+                        <option value="11">ORIENTAL BANK OF COMMERCE</option>
+                        <option value="12">PUNJAB AND SIND BANK</option>
+                        <option value="13">PUNJAB NATIONAL BANK</option>
+                        <option value="14">RESERVE BANK OF INDIA</option>
+                        <option value="15">SOUTH INDIAN BANK</option>
+                        <option value="16">UNITED BANK OF INDIA</option>
+                        <option value="17">CENTRAL BANK OF INDIA</option>
+                        <option value="18">VIJAYA BANK</option>
+                        <option value="19">DENA BANK</option>
+                        <option value="21">BHARATIYA MAHILA BANK LIMITED</option>
+                        <option value="22">FEDERAL BANK LTD </option>
+                        <option value="23">HDFC BANK LTD</option>
+                        <option value="24">ICICI BANK LTD</option>
+                        <option value="25">IDBI BANK LTD</option>
+                        <option value="66">PAYTM BANK</option>
+                        <option value="29">FINO PAYMENT BANK</option>
+                        <option value="26">INDUSIND BANK LTD</option>
+                        <option value="27">KARNATAKA BANK LTD</option>
+                        <option value="28">KOTAK MAHINDRA BANK</option>
+                        <option value="30">YES BANK LTD</option>
+                        <option value="31">SYNDICATE BANK</option>
+                        <option value="5">BANK OF INDIA</option>
+                        <option value="6">BANK OF MAHARASHTRA</option>
+                    </select>
+                </div>
+                <div class="submitbtn">
+                    <button type="submit" class="button">Done</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script>
+        const dat = new Date();
+        const m = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const payMonth = document.querySelector(".payMonth");
+payMonth.innerHTML = `Paying For : <span class="data">${m[dat.getMonth()]}  ${dat.getFullYear()}</span>`
+const EmailId = document.querySelector(".EmailId");
+const identity = document.querySelector(".identity");
+const currentMonth = document.querySelector(".currentMonth");
+const currentYear = document.querySelector(".currentYear");
+EmailId.innerHTML = `<input type="hidden" name="emails" value="${identity.innerText}">`
+currentMonth.innerHTML = `<input type="hidden" name="lastPaymentMonth" value="${m[dat.getMonth()]}">`
+currentYear.innerHTML = `<input type="hidden" name="lastPaymentMonth" value="${dat.getFullYear()}">`
+    </script>
+</body>
+
+</html>

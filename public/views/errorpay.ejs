@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+       <html lang="en">
+       <head>
+           <meta charset="UTF-8">
+           <meta http-equiv="X-UA-Compatible" content="IE=edge">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+           <title>Registrationform</title>
+           <style>
+       body{
+           display: flex;
+           justify-content: center;
+           flex-direction: column;
+           align-items: center;
+           height: 100vh;
+       }
+       a{
+           text-decoration: none;
+           color: white;
+       }
+       a:hover{
+           color: white;
+           text-decoration: none;
+       }
+           </style>
+       </head>
+       <body>
+           <div class="alert alert-danger" id="errorfield">
+               <strong> Some Error Found !</strong> <span class="err"><%=ERROR%></span>
+             </div>
+             <a href="./login"><button type="button" class="btn btn-danger">Try Again</button></a>
+               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            </body>
+       </html>

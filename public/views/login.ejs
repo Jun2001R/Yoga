@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login Here</title>
+    <script type="text/javascript" >
+      function preventBack(){window.history.forward();}
+       setTimeout("preventBack()", 0);
+       window.onunload=function(){null}; 
+   </script>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  /* background-color: #058556; */
+  background-color: #0b5aa3;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.yogalogo{
+    width:7%;
+margin: auto;
+}
+img.avatar {
+  width: 15%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+.modal {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  padding-top: 6px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 1% auto 15% auto;
+  /* border: 1px solid #888; */
+  width: 50%;
+  box-shadow: 3px 6px 8px 8px #bdbdbd;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+    </style>
+</head>
+<nav>
+  <img src="https://jun2001r.github.io/backup/yogalogo.jpg" alt="Yoga Logo" class="yogalogo">
+</nav>
+<body>
+    <div id="id01" class="modal">
+        <form class="modal-content" action="/login" method="post">
+            <div class="imgcontainer">
+                <img src="https://jun2001r.github.io/backup/user-circle.svg" alt="Avatar" class="avatar">
+            </div>
+            <div class="container">
+                <label for="emailId"><b>Email Id</b></label>
+                <input type="text" placeholder="Enter Email Id" name="emailId" autocomplete="off" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+
+                <button type="submit">Login</button>
+                
+            <div class="container" style="background-color:#f1f1f1">
+                <span class="registerNow">If you have not registered till now then here: <a href="./registration">Register Now</a></span>
+            </div>
+                
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
