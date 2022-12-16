@@ -1,4 +1,5 @@
 (Please wait for loading if you are opening to this project because it is free hosting of website in glitch plateform)
+<br />
 Building Blocks of the Project: HTML, CSS, JavaScript, Boostrap, NodeJS, ExpressJs, MongoDB and Dependencies(ejs, express, hbs, mongoose, path, popups, Validator)
 
 ![loginpage](https://user-images.githubusercontent.com/68116883/208151279-1cc96004-cf16-4457-b5fb-ccaf149ead8d.png)
@@ -16,7 +17,7 @@ from current year. Details entered in registration form are sending to database 
 <collection>.save(document) method.
 
 ![dashboard](https://user-images.githubusercontent.com/68116883/208151409-8391d4ef-743d-4bf6-bd00-9159c897205b.png)
-
+  ![paymentunpaid](https://user-images.githubusercontent.com/68116883/208153832-2a56adc1-5462-4593-bb21-7b28c3bf0f28.png)
 Dashboard:
 After registration if anyone login with their valid credentials, then its entered information will go(by post method) for searching in database by <collection>.find({emailId:req.body.email})
 and we are passing the obtained data from this searching to ejs file and then rendering(res.render("pageName",{data})) dashboard page template. In dashboard if user had not made payment then its
@@ -26,7 +27,6 @@ Here Print Button is also there where user can print its Status of payment.
 ![payment](https://user-images.githubusercontent.com/68116883/208151440-abed2641-4df3-42b0-930a-3a10b25f5cce.png)
 
   
-  ![paymentunpaid](https://user-images.githubusercontent.com/68116883/208153832-2a56adc1-5462-4593-bb21-7b28c3bf0f28.png)
 
 Payment Functionality:
 If any User newly registered then its PaymentStatus is unPaid and lastPayment Details are also N/A. After Login with their Valid Credentials user can Pay. if user click
