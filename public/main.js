@@ -134,6 +134,6 @@ const updateDocument = async()=>{
    console.log(result)
 }
 const fun = setInterval(()=>{
-    if(dat.getDate()=="16")
+    if(dat.getDate()=="1")
     updateDocument();
 }, 82800000)
